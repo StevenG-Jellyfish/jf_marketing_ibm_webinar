@@ -1,0 +1,27 @@
+*.log
+
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+
+
+#### node packages ####
+Front-End/task_runner/node_modules
+Front-End/task_runner/package-lock.json
+Front-End/css
+Front-End/js
+Front-End/task_runner/.tmp
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._.*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
