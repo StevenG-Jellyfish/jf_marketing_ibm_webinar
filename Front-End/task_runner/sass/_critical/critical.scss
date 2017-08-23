@@ -14,7 +14,7 @@ Bootstrap included as a fallback, but is not used on this project
  */
 
 // Core variables and mixins
-@import "../bootstrap/variables";
+//@import "../bootstrap/variables";
 //@import "../bootstrap/mixins";
 
 //@import "../components/mixins";
@@ -69,6 +69,7 @@ Bootstrap included as a fallback, but is not used on this project
 //From LT Components
 
 @import "../components/normalize";
+@import "../components/variables";
 @import "../components/structure";
 @import "../components/global-header";
-@import "../components/spotlight";
+@import "../components/section-main-callout";

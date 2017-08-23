@@ -11,7 +11,8 @@ header {
     height: 80px;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    background-color: #1c1c1c;
+	background-color: $brand-black;
+	z-index: 2;
 
 	.logo {
 		display: block;
@@ -21,17 +22,20 @@ header {
 		width: 124px;
 		height: 32px;
 		color: #fff;
-		outline: 1px solid red;
+		outline: $outline;
 	} // .logo
 
 	nav {
 		display: block;
 		position: absolute;
 		top: 24px;
+
+
+
 		right: 24px;
 		margin: 0 0 0 0;
 		padding: 0 0 0 0;
-		outline: 1px solid red;
+		outline: $outline;
 
 		.menu {
 			list-style: none;
@@ -49,7 +53,7 @@ header {
 					display: block;
 					font-size: 15px;
 					font-weight: 400;    
-					font-family: 'Roboto Mono', monospace;
+					font-family: $font-family-monospace;
 					letter-spacing: 3px;
 					line-height: 32px;
 					text-decoration: none;
@@ -59,7 +63,7 @@ header {
 
 				a:active,
 				a:hover {
-					border-bottom-color: #8bc53f;;
+					border-bottom-color: $brand-secondary;
 				} // a:active, a:hover
 
 			} // li

@@ -1,0 +1,44 @@
+form {
+    padding: 0 15%;
+
+    label {
+        display: block;
+        font-size: 11px;
+        font-family: $font-family-monospace;
+        text-transform: uppercase; 
+        letter-spacing: 2.2px;
+        line-height: 29px;
+        color: $brand-primary;
+    }
+    input {
+        width: 100%;
+        padding: 4px;
+        border-style: none;
+        border: 1px solid $brand-secondary;
+        background-color: $grey-light;
+        font-size: 16px;
+        font-family: $font-family-monospace;
+        letter-spacing: 2.2px;
+        line-height: 1.45em;
+        color: $brand-primary;
+        outline: 0px;
+    }
+    input[type=submit] {
+        position: relative;
+        display: block;
+        width: 186px;
+        height: 51px;
+        background-color: $brand-secondary;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: $font-family-monospace;
+        text-transform: uppercase; 
+        letter-spacing: 2.2px;
+        color: $grey-base;
+        z-index: 2;
+    }
+    input[type=submit]:hover,
+    input[type=submit]:active {
+        cursor: pointer;
+    } 
+}

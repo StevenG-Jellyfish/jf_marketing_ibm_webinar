@@ -66,4 +66,10 @@ Bootstrap included as a fallback, but is not used on this project
 //@import "../bootstrap/utilities";
 //@import "../bootstrap/responsive-utilities";
 
+
+@import "../components/variables";
+@import "../components/section-event-info";
+@import "../components/section-speakers";
+@import "../components/section-registration";
+@import "../components/form";
 @import "../components/footer";

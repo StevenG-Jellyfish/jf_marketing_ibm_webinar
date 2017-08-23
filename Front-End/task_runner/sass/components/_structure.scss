@@ -14,19 +14,115 @@ Colors:
 */
 
 body {
-    font-size: 18px;
+    font-size: $font-size-base;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-family-sans-serif;
     letter-spacing: 0.09px;
     line-height: 27px;
-    color: #3c3c3c;
-}
+    color: $grey-text;
 
-main{
-	margin-top: 69px;
+    h1 {
+        font-size: $font-size-base;
+        font-weight: 300;
+        font-family: $font-family-sans-serif;
+        letter-spacing: 0.09px;
+        line-height: 27px;
+        color: $brand-primary; 
+    }
+
+    .white { color: #fff; }
+    .green { color: $brand-secondary; }
+    .purple { color: $brand-primary; }
+
+    .mono { font-family: $font-family-monospace; }
+    .uppercase { text-transform: uppercase; }
+
+    .center { text-align: center; }
+    .left { text-align: left; }
+    .right { text-align: right; }
+
+    .third-width {
+        position: relative;
+        display: inline-block;
+        width: 30%;
+        margin: 0 2% 2% 0;
+    } // third-width
+    .half-width {
+        position: relative;
+        display: inline-block;
+        width: 45%;
+        min-width: 280px;
+        margin: 0 2% 2% 0;
+    } // third-width
+
+    .slashed:before,
+    .slashed:after {
+        content: "//";
+        display: inline;
+        color: $brand-secondary; 
+    } //slashed
+
+    .icon {
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: 0 auto;
+        outline: $outline;
+    } // icon
+    .pencil {
+        
+    } // pencil
+    .microphone {
+
+    } // microphone
+    .lightbulb {
+
+    } // lightbulb
+
+    .psudo-button-border { 
+        position: relative; 
+        display: block;
+        width: 186px;
+        height: 51px;
+        margin: 0 auto;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 10px;
+            left: 10px;
+            width: 184px;
+            height: 49px;
+            outline: 1px solid $brand-primary;
+            z-index: 1;
+            transition: 0.1s all;
+        } // psudo-button-border:after
+          
+        &:hover {   
+             &:after {
+                top: 1px;
+                left: 1px;       
+            } // &:after
+
+        } // &:hover
+
+    } // psudo-button-border
+
+} // body
+
+main {
+    margin-top: 80px;
+    z-index: 1;
+	outline: $outline;
+    
 	@media screen and (min-width: $screen-sm-min){
-		margin-top: 93px;
-	}
-}
+		margin-top: 80px;
+	} // media: screen-sm-min
+} // main
 
-section {}
+section {
+    margin: 0;
+    padding: 24px;
+	outline: $outline;
+} // section

@@ -16,7 +16,7 @@
 
   <!-- css -->
   <link rel="stylesheet" href="css/critical.css?v=1.0">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -28,54 +28,81 @@
 </head>
 
 <body>
+        
+    <a name="page-top" id="page-top"></a>   
 
 <!-- header -->
     <header>
         <a href="http://jellyfish.net" class="logo">Jellyfish</a>
         <nav>
             <ul class="menu">
-                <li><a href="#event-info">Event Info</a></li>
-                <li><a href="#speakers">Speakers</a></li>
-                <li><a href="#register-now">Register Now</a></li>
+                <li><a href="#event-info-top">Event Info</a></li>
+                <li><a href="#speakers-top">Speakers</a></li>
+                <li><a href="#registration-top">Register Now</a></li>
             </ul>
         </nav>
     </header>
 <!-- //header -->
 
 <!-- main -->
-    <main>
-            
+    <main> 
+    
     <!-- section -->
-        <section id="main-callout">
+        <section id="main-callout" class="center">
+            <h1 class="white mono">Will your marketing survive the AI Boom?</h1>
+            <h2 class="green mono uppercase">Jellyfish Webinar Series</h2>
+            <p class="white mono uppercase">August 29th, 2017 <span class="green">/</span> 1:00PM EST</p>
 
-            <button class="scroll-for-more">Scroll for More</button>
+            <a class="register-now">Register Now</a>
+            <div id="prested-by" class="white">Presented by<br>
+                <a href="http://jellyfish.net" class="">Jellyfish</a>
+                <a href="http://ibm.com" class="">IBM</a>
+            </div>
+            <a href="#event-info-top" class="scroll-for-more">Scroll for More</a>
         </section>
     <!-- //section -->
 
 
+    <a name="event-info-top" id="event-info-top"></a>
      <!-- section -->
-        <section id="event-info">
-            <a name="event-info" id="event-info"></a>
-            <h1><span class="icon"</span>
-            PUBLIC_HTML
+        <section id="event-info" class="center">
+            <span class="icon lightbulb"></span>
+            <h1 class="center uppercase slashed">
+                Event Info
             </h1>
 
             
-            <button class="register-now">Register Now</button>
+            <a href="#registration-top" class="register-now">Register Now</a>
         </section>
     <!-- //section -->
         
+
+    <a name="speakers-top" id="speakers-top"></a>
     <!-- section -->
-        <section id="speakers">
-            <h1><span class="icon"</span></h1>
+        <section id="speakers">            
+            <span class="icon microphone"></span>
+            <h1 class="center uppercase slashed">
+                Speakers
+            </h1>
             
-            <div></div>
-            <div></div>
+            <div class="center half-width">
+                <span class="speaker-name purple">Michael Trapani</span>
+            </div>
+            <div class="center half-width">
+                <span class="speaker-name purple">Monica Dibartolo</span>
+            </div>
         </section>
     <!-- //section -->
-        
+    
+    
+    <a name="registration-top" id="registration-top"></a>
     <!-- section -->
         <section id="registration">
+            <span class="icon pencil"></span>
+            <h1 class="center uppercase slashed">
+                Registration
+            </h1>
+
             <form>
 
                 <!-- row one -->
@@ -107,7 +134,10 @@
                     <input aria-required="true" class="form-control" id="Company" name="Company" required="" type="text" value="">
                 </div>
                 <!-- //row two -->
-                <button class="submit">Submit</button>
+                <div class="psudo-button-border">
+                    <input type="submit" class="submit" value="Submit">
+                </div>
+
             </form>                
         </section>
     <!-- //section -->
@@ -118,7 +148,7 @@
     
 <!-- footer -->
     <footer>
-    
+            <a href="#page-top" class="back-top">Back to top</a>
     </footer>  
 <!-- //footer -->
 
