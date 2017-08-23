@@ -1,0 +1,32 @@
+/*
+Fonts:
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto', sans-serif;
+
+Colors:
+#7f3f97; -- purple
+#8bc53f; -- green
+#1c1c1c; -- black
+#2d2d2d; -- dark gray
+#3c3c3c; -- text grey
+#f1f1f1; -- light grey
+#ffffff; -- white
+*/
+
+body {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.09px;
+    line-height: 27px;
+    color: #3c3c3c;
+}
+
+main{
+	margin-top: 69px;
+	@media screen and (min-width: $screen-sm-min){
+		margin-top: 93px;
+	}
+}
+
+section {}
