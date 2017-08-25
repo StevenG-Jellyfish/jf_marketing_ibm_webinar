@@ -10,8 +10,8 @@
   <meta name="author" content="Jellyfish">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+  <!-- fonts 
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">-->
 
 
   <!-- css -->
@@ -27,9 +27,7 @@
   -->
 </head>
 
-<body>
-        
-    <a name="page-top" id="page-top"></a>   
+<bodyn Name="page-top" id="page-top">
 
 <!-- header -->
     <header>
@@ -49,33 +47,55 @@
     
     <!-- section -->
         <section id="main-callout" class="center">
-            <h1 class="white mono">Will your marketing survive the AI Boom?</h1>
-            <h2 class="green mono uppercase">Jellyfish Webinar Series</h2>
-            <p class="white mono uppercase">August 29th, 2017 <span class="green">/</span> 1:00PM EST</p>
+            <div class="callout-container">    
+                <h1 class="white mono">Will your marketing survive the AI Boom?</h1>
+                <h2 class="green mono uppercase">Jellyfish Webinar Series</h2>
+                <p class="white mono uppercase">August 29th, 2017 <span class="green">/</span> 1:00PM EST</p>
 
-            <a class="register-now">Register Now</a>
-            <div id="prested-by" class="white">Presented by<br>
-                <a href="http://jellyfish.net" class="">Jellyfish</a>
-                <a href="http://ibm.com" class="">IBM</a>
+                <a class="register-now btn">Register Now</a>
+            </div>
+
+            <div id="presented-by" class="white">
+                Presented by<br>
+                <a href="http://jellyfish.net" class="logo jellyfish">Jellyfish</a>
+                <a href="http://ibm.com" class="logo ibm">IBM</a>
             </div>
             <a href="#event-info-top" class="scroll-for-more">Scroll for More</a>
         </section>
     <!-- //section -->
 
+    <div class="page-divider-1"></div>
+
 
     <a name="event-info-top" id="event-info-top"></a>
      <!-- section -->
         <section id="event-info" class="center">
-            <span class="icon lightbulb"></span>
+            <span class="icon lightbulb">
+                <!--
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 48"><defs><style>.a,.b{fill:none;}.a{stroke:#7f3f97;stroke-miterlimit:10;}</style></defs><title>lightbulb</title><path class="a" d="M26.8,38.7a3.7,3.7,0,0,1-7.5,0"/><path class="a" d="M17.3,30.2H28.7A1.3,1.3,0,0,1,30,31.6v.1A1.4,1.4,0,0,1,28.7,33H17.3A1.4,1.4,0,0,1,16,31.7v-.1A1.4,1.4,0,0,1,17.3,30.2Z"/><path class="a" d="M17.3,33H28.7A1.3,1.3,0,0,1,30,34.4v.1a1.3,1.3,0,0,1-1.3,1.3H17.3A1.4,1.4,0,0,1,16,34.5v-.1A1.4,1.4,0,0,1,17.3,33Z"/><path class="a" d="M17.3,35.8H28.7A1.3,1.3,0,0,1,30,37.2v.1a1.4,1.4,0,0,1-1.4,1.4H17.3A1.4,1.4,0,0,1,16,37.3v-.1A1.4,1.4,0,0,1,17.3,35.8Z"/><path class="a" d="M31.7,22.6c-2.1,3.8-2.6,4.4-2.6,7.6H16.9c0-3.2-.5-3.8-2.6-7.6a10.8,10.8,0,1,1,17.4,0Z"/><rect class="b" width="46" height="48"/></svg>
+                -->
+            </span>
             <h1 class="center uppercase slashed">
                 Event Info
             </h1>
+            <h2 class="purple">The AI boom in marketing is here. Are you ready?</h2>
+            <p>
+            AI has the power to make your marketing smarter, faster, and more precise. And customers are much more savvy to their wants when it comes to online interaction. They know what they want when they want it, so marketers need to deliver at every possible moment. Marketers can better leverage these moments where customers expect and demand relevant, engaging personalized experiences across every touch point. 
+            </p>
+            <p>
+            Learn how leveraging AI can help marketers improve conversion rates and effectively target audiences without sacrificing subtlety. 
+            </p>
+            <p>
+            Stay one step ahead of your customers with the power of AI. <strong>Join Jellyfish and IBM in a thought provoking discussion that will provide insight and action for being prepared for the future of marketing automation.</strong>
+            </p>
 
-            
-            <a href="#registration-top" class="register-now">Register Now</a>
+            <div class="psudo-button-border">
+                <a href="#registration-top" class="register-now btn">Register Now</a>
+            </div> 
         </section>
     <!-- //section -->
         
+    <div class="page-divider-2"></div>
 
     <a name="speakers-top" id="speakers-top"></a>
     <!-- section -->
@@ -86,13 +106,25 @@
             </h1>
             
             <div class="center half-width">
-                <span class="speaker-name purple">Michael Trapani</span>
+                <span class="speaker-image-container green-frame"><img src="../images/Michael-Trapani.jpg" id="Michael-Trapani" class="speaker-image"></span>
+                <span class="logo ibm-watson">ibm watson</span>
+                <span class="speaker-name purple bold">Michael Trapani</span>
+                <span class="speaker-title purple light">Product Marketing Leader
+                IBM Watson Marketing</span>
+                <a href="https://twitter.com/ThatsLogical" target="_blank" class="speaker-twitter green">@ThatsLogical</a>
+                
             </div>
             <div class="center half-width">
-                <span class="speaker-name purple">Monica Dibartolo</span>
+                <span class="speaker-image-container purple-frame"><img src="../images/Monica-Dibartolo.jpg" id="Monica-Dibartolo" class="speaker-image"></span>
+                <span class="logo jellyfish">jellyfish</span>
+                <span class="speaker-name purple bold">Monica Dibartolo</span>
+                <span class="speaker-title purple light">Email Marketing Director Jellyfish</span>
+                <a href="https://twitter.com/MonicaDibo" target="_blank" class="speaker-twitter green">@MonicaDibo</a>
             </div>
         </section>
     <!-- //section -->
+        
+    <div class="page-divider-3"></div>
     
     
     <a name="registration-top" id="registration-top"></a>
@@ -141,6 +173,8 @@
             </form>                
         </section>
     <!-- //section -->
+        
+        <div class="page-divider-2"></div>
 
     </main>
 <!-- //main -->

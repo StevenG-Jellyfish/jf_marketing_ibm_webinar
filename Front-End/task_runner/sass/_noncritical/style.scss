@@ -68,6 +68,7 @@ Bootstrap included as a fallback, but is not used on this project
 
 
 @import "../components/variables";
+@import "../components/mixins/sprite-icons";
 @import "../components/section-event-info";
 @import "../components/section-speakers";
 @import "../components/section-registration";

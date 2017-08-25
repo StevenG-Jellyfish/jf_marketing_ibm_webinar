@@ -3,5 +3,57 @@
 */
 
 #speakers {
+    
+    .speaker-image-container {
+        position: relative;
+        display: inline-block;
+        float: none;
+        clear: both;
+        width: 150px;
+        height: 150px;
+        margin: 20px 0 0 0;
+        text-align: center;
+        
+
+        
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -10px;
+            left: -10px;
+            width: 150px;
+            height: 150px;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            outline: 1px solid $brand-primary;
+            z-index: 1;
+        } // speaker-image-c:after
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        } // img
+
+    } // speaker-image-container
+
+    .logo {
+        display: block;
+        float: none;
+        clear: both;
+        margin: 10px auto;
+        text-indent: -9999px;
+
+        &.ibm-watson {
+            width: 160px;
+            height: 65px;
+            background-image: url("../images/ibm-watson-logo.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        } // &.ibm-watson
+    } // .logo
 
 } // speakers

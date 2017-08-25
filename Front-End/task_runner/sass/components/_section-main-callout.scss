@@ -11,5 +11,150 @@ Mobile - min-height of 250px (will grow with spotlight copy)
 **/
 
 #main-callout {
+    position: relative;
+    min-height: 608px;
     background-color: $brand-black;
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0px;
+        left: 50%;
+        width: 970px;
+        margin: 0 0 0 -498px;
+        background-size: 970px 508px;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include icon( lg-background, 970px, 508px, transparent );
+    } // &:after
+
+   
+
+    .callout-container {
+        padding: 125px 0 0 0;
+        background-color: $brand-black;
+
+        h1 {
+            max-width: 570px;
+            margin: 0 auto 20px auto;
+            font-size: $font-size-callout;
+            font-weight: 700;
+            line-height: 1.25em;
+            text-align: center;
+        } // h1
+
+        h2 {
+            margin: 0 0 0 0;
+            font-size: $font-size-base;
+            font-weight: 500;
+        } // h2
+
+        p {
+            margin: 0 0 20px 0;
+            font-size: $font-size-base;
+            font-weight: 500;
+        } // p
+        
+        .register-now.btn {
+            margin: 5px auto 15px auto;
+
+            &:hover,
+            &:active {
+                background-color: $brand-primary;
+                color: #fff;
+
+            } // &:active, &:hover
+
+        } // .register-now.btn    
+
+    } // .callout-container
+
+    #presented-by {
+        margin: 35px auto 0 auto;
+        font-size: $font-size-small;
+        font-weight: 200;
+        font-family: $font-family-sans-serif;
+        letter-spacing: 0.09px;
+        line-height: 27px;
+        color: $grey-light;
+    } // #presented-by
+
+    .logo {
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 56px;
+        margin: 0 0 0 0;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        text-indent: -9999px;
+    
+        &.jellyfish {
+            margin-left: 45px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 18px;
+                right: 0px;
+                background-size: 124px 26px;
+                background-position: center;
+                background-repeat: no-repeat;
+                @include icon( jellyfish-logo, 124px, 26px, transparent );
+            } // &:after
+        } //  &.jellyfish 
+        
+        &.ibm {
+            //background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg');
+            
+            background-image: url('../images/logo-ibm.png');
+            fill: #fff;
+        } // &.ibm 
+    } // .logo
+    
+    .scroll-for-more {
+        display: block;
+        position: relative;
+        width: 160px;
+        height: 112px;
+        margin: 20px auto 0 auto;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        text-indent: -9999px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-size: 153px 95px;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include icon( scroll-button-1, 153px, 95px, transparent );
+            z-index: 10;
+            
+        } // &:after
+
+        &:hover,
+        &:active {
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                background-size: 153px 95px;
+                background-position: center;
+                background-repeat: no-repeat;
+                @include icon( scroll-button-2, 153px, 95px, transparent );
+                
+            } //&:after
+
+        } // &:hover,&:active
+    
+    } // .scroll-for-more 
+
 } // main-callout

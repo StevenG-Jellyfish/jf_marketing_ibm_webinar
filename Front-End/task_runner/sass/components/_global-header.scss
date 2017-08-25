@@ -12,7 +12,7 @@ header {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 	background-color: $brand-black;
-	z-index: 2;
+	z-index: 12;
 
 	.logo {
 		display: block;
@@ -21,8 +21,20 @@ header {
 		left: 24px;
 		width: 124px;
 		height: 32px;
+		text-indent: -9999px;
 		color: #fff;
-		outline: $outline;
+
+		&:after {
+            content: '';
+			position: absolute;
+			display: block;
+			top: 0px;
+			left: 0px;
+            background-size: 124px 32px;
+            background-position: center;
+            background-repeat: no-repeat;
+			@include icon(jellyfish-logo, 124px, 32px, transparent);
+		}
 	} // .logo
 
 	nav {

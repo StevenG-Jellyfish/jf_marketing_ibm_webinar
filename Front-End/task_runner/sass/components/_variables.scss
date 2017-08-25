@@ -19,6 +19,7 @@
         #ffffff; -- white
 */
 
+
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -68,7 +69,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Roboto Mono", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -79,7 +80,7 @@ $font-size-callout:       ceil(($font-size-base * 2.167)) !default; // ~39px
 $font-size-xlarge:        ceil(($font-size-base * 1.167)) !default; // ~21px
 $font-size-large:         ceil(($font-size-base * 1.056)) !default; // ~19px
 $font-size-small:         ceil(($font-size-base * 0.778)) !default; // ~15px
-$font-size-small:         ceil(($font-size-base * 0.778)) !default; // ~14px
+$font-size-xsmall:         ceil(($font-size-base * 0.778)) !default; // ~14px
 
 /*LT-font-size*/
 $mobile-font-size-base : 15px; //just change this value to desired mobile base font size
