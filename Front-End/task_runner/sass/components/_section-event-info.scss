@@ -4,6 +4,17 @@
 
 #event-info {
     position: relative;
+    padding-bottom: 20px;
     background-color: $grey-light;
+    overflow: visible;
     z-index: 9;
+
+    @media screen and (max-width: $screen-xs) {       
+        margin-top: -15px;
+    }
+    
+    @media screen and (min-width: $screen-xs+1) and (max-width: $screen-sm) {       
+        margin-top: -25px;
+        padding-top: 20px;
+    }
 } // event-info

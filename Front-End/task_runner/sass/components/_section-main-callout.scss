@@ -12,9 +12,14 @@ Mobile - min-height of 250px (will grow with spotlight copy)
 
 #main-callout {
     position: relative;
+    margin-top: 120px;
     min-height: 608px;
     background-color: $brand-black;
 
+    @media screen and (max-width: $screen-sm) { 
+        margin-top: 0px;
+        min-height: 363px;
+    }
 
     &:after {
         content: '';
@@ -22,14 +27,24 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         display: block;
         top: 0px;
         left: 50%;
-        width: 970px;
         margin: 0 0 0 -498px;
         background-size: 970px 508px;
         background-position: center;
         background-repeat: no-repeat;
         @include icon( lg-background, 970px, 508px, transparent );
-    } // &:after
+        width: 970px;
 
+        @media screen and (max-width: $screen-xs) {
+            left: 0;
+            margin: 0 0 0 -10px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include icon( sm-background, 545px, 363px, transparent );
+            width: 100%;
+        }
+    
+    } // &:after
    
 
     .callout-container {
@@ -43,22 +58,43 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             font-weight: 700;
             line-height: 1.25em;
             text-align: center;
+
+            @media screen and (max-width: $screen-xs) {
+                width: 100%;
+                max-width: 545px;
+                margin: -30px auto 10px auto;
+                font-size: 1.15em;
+            }
         } // h1
 
         h2 {
             margin: 0 0 0 0;
             font-size: $font-size-base;
             font-weight: 500;
+            
+            @media screen and (max-width: $screen-xs) {
+                margin: 0 auto 0 auto;
+                font-size: .80em;
+            }
         } // h2
 
         p {
             margin: 0 0 20px 0;
             font-size: $font-size-base;
             font-weight: 500;
+            
+            @media screen and (max-width: $screen-xs) {
+                margin: 0 auto 10px auto;
+                font-size: .80em;
+            }
         } // p
         
         .register-now.btn {
             margin: 5px auto 15px auto;
+            
+            @media screen and (max-width: $screen-xs) {
+                margin: 15px auto 0px auto;
+            }
 
             &:hover,
             &:active {
@@ -79,6 +115,16 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         letter-spacing: 0.09px;
         line-height: 27px;
         color: $grey-light;
+
+        &:after {
+            content: '';
+            position: relative;
+            display: block;
+            float: none;
+            clear: both;
+            height: 1px;
+        }
+
     } // #presented-by
 
     .logo {
@@ -91,6 +137,11 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         background-position: left top;
         background-size: contain;
         text-indent: -9999px;
+
+        @media screen and (max-width: $screen-xs) {
+            float: left;
+            width: 100px;
+        }
     
         &.jellyfish {
             margin-left: 45px;
@@ -119,13 +170,18 @@ Mobile - min-height of 250px (will grow with spotlight copy)
     .scroll-for-more {
         display: block;
         position: relative;
-        width: 160px;
         height: 112px;
+        width: 160px;
         margin: 20px auto 0 auto;
         background-repeat: no-repeat;
         background-position: left top;
         background-size: contain;
         text-indent: -9999px;
+
+
+        @media screen and (max-width: $screen-sm) {
+            display: none;
+        }
 
         &:after {
             content: '';
@@ -138,7 +194,7 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             z-index: 10;
             
         } // &:after
-
+/*
         &:hover,
         &:active {
 
@@ -146,15 +202,15 @@ Mobile - min-height of 250px (will grow with spotlight copy)
                 content: '';
                 position: absolute;
                 display: block;
-                background-size: 153px 95px;
+                background-size: 128.4px 75.3px;
                 background-position: center;
                 background-repeat: no-repeat;
-                @include icon( scroll-button-2, 153px, 95px, transparent );
+                @include icon( scroll-button-2, 123.8px, 75.3px, transparent );
                 
             } //&:after
 
         } // &:hover,&:active
-    
+*/    
     } // .scroll-for-more 
 
 } // main-callout

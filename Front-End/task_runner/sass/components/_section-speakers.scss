@@ -3,33 +3,44 @@
 */
 
 #speakers {
-    
+
     .speaker-image-container {
         position: relative;
         display: inline-block;
         float: none;
         clear: both;
-        width: 150px;
-        height: 150px;
+        width: 194px;
+        height: 194px;
         margin: 20px 0 0 0;
         text-align: center;
-        
 
-        
+        @media screen and (max-width: 480px) {
+            margin: 40px 0 0 0;
+        }
+
         &:after {
             content: '';
             position: absolute;
             display: block;
-            top: -10px;
-            left: -10px;
-            width: 150px;
-            height: 150px;
-            background-image: url();
-            background-repeat: no-repeat;
+            top: -15px;
+            left: -15px;
+            width: 194px;
+            height: 194px;
             background-size: cover;
-            outline: 1px solid $brand-primary;
+            background-repeat: no-repeat;
             z-index: 1;
         } // speaker-image-c:after
+
+        &.green-frame {
+            &:after {
+                @include icon( speaker-background-green, 194px, 194px, transparent );
+            } //  &:after 
+        } // &.green-frame
+        &.purple-frame {
+            &:after {
+                @include icon( speaker-background-purple, 194px, 194px, transparent );
+            } //  &:after 
+        } // &.purple-frame
 
         img {
             position: relative;
@@ -50,10 +61,69 @@
         &.ibm-watson {
             width: 160px;
             height: 65px;
+            top: 20px;
             background-image: url("../images/ibm-watson-logo.png");
             background-repeat: no-repeat;
             background-size: contain;
         } // &.ibm-watson
+
+        &.jellyfish {
+            width: 160px;
+            height: 65px;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            &:after {
+                content: '';
+                position: relative;
+                display: block;
+                top: 0px;
+                left: 0px;
+                background-size: 124px 32px;
+                background-position: center;
+                background-repeat: no-repeat;
+                @include icon(jellyfish-logo-purple, 124px, 32px, #7f3f97);
+            } // &:after
+
+        } // &.jellyfish
+
     } // .logo
+
+    .speaker-name {
+        display: block;
+        font-size: $font-size-large;
+        font-family: $font-family-monospace;
+        font-weight: 700;
+        letter-spacing: 3.72px;
+        line-height: $font-family-monospace;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 480px) {
+            margin-top: -20px;
+        }
+    } // .speaker-name
+    .speaker-title {
+        display: block;
+        font-size: $font-size-xsmall;
+        font-family: $font-family-monospace;
+        font-weight: 300;
+        letter-spacing: 0.14px;
+        line-height: 18px;
+    } // .speaker-title
+    .speaker-twitter {
+        display: block;
+        margin-top: 5px;
+        font-size: $font-size-xsmall;
+        font-family: $font-family-monospace;
+        font-weight: 400;
+        letter-spacing: 0.14px;
+        line-height: 18px;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    } // .speaker-twitter
 
 } // speakers

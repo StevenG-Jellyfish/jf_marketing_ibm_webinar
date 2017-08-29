@@ -36,6 +36,11 @@ form {
         letter-spacing: 2.2px;
         color: $grey-base;
         z-index: 2;
+
+        
+        @media screen and (max-width: $screen-xs) {       
+            margin-top: 10px;
+        }
         
         &:hover,
         &:active {

@@ -8,11 +8,15 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 80px;
+    height: 120px;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 	background-color: $brand-black;
 	z-index: 12;
+			
+	@media screen and (max-width: $screen-sm) { 
+		display: none;
+	}
 
 	.logo {
 		display: block;
@@ -40,14 +44,10 @@ header {
 	nav {
 		display: block;
 		position: absolute;
-		top: 24px;
-
-
-
+		top: 0px;
 		right: 24px;
 		margin: 0 0 0 0;
 		padding: 0 0 0 0;
-		outline: $outline;
 
 		.menu {
 			list-style: none;
@@ -57,7 +57,7 @@ header {
 			li {
 				list-style: none;
 				float: left;
-				margin: 0 30px;
+				margin: 24px 30px 0 30px;
 				padding: 0 0 0 0;
 
 				a:link,
@@ -77,6 +77,35 @@ header {
 				a:hover {
 					border-bottom-color: $brand-secondary;
 				} // a:active, a:hover
+
+				a.register-now.btn {
+					position: relative;
+					display: block;
+					width: 186px;
+					height: 51px;
+					top: -12px;
+					background-color: $brand-secondary;
+					border-bottom: 0px;
+					font-size: 15px;
+					font-weight: 500;
+					font-family: $font-family-monospace;
+					text-transform: uppercase; 
+					text-decoration: none;
+					letter-spacing: 2.2px;
+					line-height: 51px;
+					text-align: center;
+					color: $grey-base;
+					z-index: 2;
+					
+					&:hover,
+					&:active {
+						border-bottom: 0px;
+						background-color: $brand-primary;
+						color: #fff;
+		
+					} // &:active, &:hover
+
+				}
 
 			} // li
 

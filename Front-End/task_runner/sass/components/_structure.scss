@@ -60,6 +60,11 @@ body {
         display: inline-block;
         width: 30%;
         margin: 0 2% 2% 0;
+
+        @media screen and (max-width: $screen-xs) {   
+            width: 100%;
+        }
+
     } // third-width
     .half-width {
         position: relative;
@@ -67,6 +72,11 @@ body {
         width: 45%;
         min-width: 280px;
         margin: 0 2% 2% 0;
+        
+        @media screen and (max-width: $screen-xs) {   
+            width: 100%;
+        }
+
     } // third-width
 
     .btn {
@@ -100,6 +110,11 @@ body {
         line-height: 27px;
         color: $brand-primary; 
 
+
+        @media screen and (max-width: $screen-xs) {            
+            padding-top: 15px;
+        }
+
         &:before,
         &:after {
             content: "//";
@@ -116,6 +131,10 @@ body {
         height: 60px;
         margin: 0 auto;
         outline: 1px solid $brand-primary;
+
+        @media screen and (max-width: $screen-sm) {            
+            display: none;
+        }
 
         &:after {
             content: '';
@@ -143,7 +162,19 @@ body {
         width: 186px;
         height: 51px;
         margin: 0 auto;
-          
+        z-index: 100;
+
+        &:after {
+            content: '';
+            position: absolute; 
+            display: block;
+            top: 10px;
+            left: 10px;
+            width: 184px;
+            height: 49px;
+            outline: 1px solid $brand-primary;
+        }
+
         &:hover {   
              &:after {
                 top: 1px;
@@ -162,29 +193,52 @@ main {
     margin-top: 80px;
     z-index: 8;
     
-	@media screen and (min-width: $screen-sm-min){
-		margin-top: 80px;
+	@media screen and (max-width: $screen-sm-min){
+		margin-top: 0px;
     } // media: screen-sm-min
 
    .page-divider-1 {
         position: relative;
         width: 100%;
         height: 271px;
-        margin-top: -150px;
+        margin-top: -100px;
         margin-bottom: -50px;
         z-index: 9;
 
+        @media screen and (max-width: $screen-xs) {     
+            height: 54px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }    
+        
+        @media screen and (min-width: $screen-xs+1) and (max-width: $screen-sm) {    
+            height: 104px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }    
         &:after {
             content: '';
             position: absolute;
             display: block;
             top: 0px;
             left: 0px;
-            width: 100%;
             background-size: cover;
             background-position: left;
             background-repeat: no-repeat;
             @include icon( page-divider-1, 1920px, 271px, transparent );
+            width: 100%;
+
+            @media screen and (max-width: $screen-xs) {       
+                background-size: cover;
+                height: 54px;
+            }
+            
+            @media screen and (min-width: $screen-xs+1) and (max-width: $screen-sm) {  
+                top: -1px;          
+                background-size: cover;
+                height: 104px;
+            }
+
         } // &:after 
 
    } // .page-divider-1
@@ -194,6 +248,12 @@ main {
         width: 100%;
         height: 98px;
         z-index: 9;
+        
+        @media screen and (max-width: $screen-sm) {       
+            height: 47px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
         &:after {
             content: '';
@@ -201,11 +261,17 @@ main {
             display: block;
             top: 0px;
             left: 0px;
-            width: 100%;
             background-size: cover;
             background-position: left;
             background-repeat: no-repeat;
             @include icon( page-divider-2, 1920px, 97px, transparent );
+            width: 100%;
+
+            @media screen and (max-width: $screen-sm) {     
+                background-size: cover;
+                height: 47px;
+            }
+
         } // &:after 
 
     } // .page-divider-2
@@ -215,6 +281,12 @@ main {
          width: 100%;
          height: 126px;
          z-index: 9;
+         
+        @media screen and (max-width: $screen-sm) {       
+            height: 43px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
  
          &:after {
              content: '';
@@ -222,32 +294,52 @@ main {
              display: block;
              top: 0px;
              left: 0px;
-             width: 100%;
              background-size: cover;
              background-position: left;
              background-repeat: no-repeat;
              @include icon( page-divider-3, 1920px, 126px, transparent );
+             width: 100%;
+             
+            @media screen and (max-width: $screen-sm) {    
+                top: 1px;       
+                background-size: cover;
+                height: 43px;
+            }
          } // &:after 
  
      } // .page-divider-3
      
       .page-divider-4 {
-          position: relative;
-          width: 100%;
-          height: 102px;
-          z-index: 9;
-  
+        position: relative;
+        width: 100%;
+        height: 102px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        z-index: 9;
+          
+        @media screen and (max-width: $screen-sm) {       
+            height: 51px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
           &:after {
               content: '';
               position: absolute;
               display: block;
               top: 0px;
               left: 0px;
-              width: 100%;
-              background-size: contain;
+              background-size: cover;
               background-position: left;
               background-repeat: no-repeat;
               @include icon( page-divider-4, 1920px, 102px, transparent );
+              width: 100%;
+              
+                @media screen and (max-width: $screen-sm) {   
+                    top: 1px;    
+                    background-size: cover;
+                    height: 51px;
+                }
           } // &:after 
   
       } // .page-divider-4
@@ -256,5 +348,10 @@ main {
 
 section {
     margin: 0;
-    padding: 0 15%;
+    padding: 0 10%;
+
 } // section
+
+
+@media screen and (max-width: 480px) {
+}
