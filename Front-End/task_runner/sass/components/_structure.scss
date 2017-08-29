@@ -352,6 +352,19 @@ section {
 
 } // section
 
+#page-top {
+    display: none;
+    left: 0;
+    top: 0;
+}
+#page-top:target {
+    display: table;
+    position: absolute;
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $screen-xs) {
+}
+@media screen and (max-width: $screen-sm) {
+}
+@media screen and (min-width: $screen-xs+1) and (max-width: $screen-sm) { 
 }

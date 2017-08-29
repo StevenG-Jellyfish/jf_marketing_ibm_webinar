@@ -80,7 +80,7 @@ $font-size-callout:       ceil(($font-size-base * 2.167)) !default; // ~39px
 $font-size-xlarge:        ceil(($font-size-base * 1.167)) !default; // ~21px
 $font-size-large:         ceil(($font-size-base * 1.056)) !default; // ~19px
 $font-size-small:         ceil(($font-size-base * 0.778)) !default; // ~15px
-$font-size-xsmall:         ceil(($font-size-base * 0.778)) !default; // ~14px
+$font-size-xsmall:        ceil(($font-size-base * 0.778)) !default; // ~14px
 
 /*LT-font-size*/
 $mobile-font-size-base : 15px; //just change this value to desired mobile base font size
