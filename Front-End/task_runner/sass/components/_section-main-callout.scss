@@ -137,6 +137,7 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         background-position: left top;
         background-size: contain;
         text-indent: -9999px;
+        z-index: 200;
 
         @media screen and (max-width: $screen-xs) {
             float: left;
@@ -145,6 +146,10 @@ Mobile - min-height of 250px (will grow with spotlight copy)
     
         &.jellyfish {
             margin-left: 45px;
+            
+            @media screen and (max-width: $screen-xs) {
+                margin-left:25%;
+            }
 
             &:after {
                 content: '';
@@ -162,7 +167,8 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         &.ibm {
             //background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg');
             
-            background-image: url('../images/logo-ibm.png');
+            //background-image: url('../images/logo-ibm.png');
+            background-image: url("https://engage2.silverpop.com/landingpages/service/userContentService?contentId=7546979");
             fill: #fff;
         } // &.ibm 
     } // .logo

@@ -21,6 +21,14 @@ body {
     line-height: 27px;
     color: $grey-text;
 
+    &.confirmation-page {
+        background-color: $grey-light;
+    }
+
+    p:empty {
+
+    }
+
     h1 {
         font-size: $font-size-callout;
         font-weight: 700;
@@ -129,7 +137,9 @@ body {
         display: block;
         width: 60px;
         height: 60px;
-        margin: 0 auto;
+        margin: 26px auto 15px auto;
+        text-indent: -9999px; // need this to hold open the empty span tag in IBMWatson
+        font-size: .001em;    // need this to hold open the empty span tag in IBMWatson
         outline: 1px solid $brand-primary;
 
         @media screen and (max-width: $screen-sm) {            
@@ -139,6 +149,7 @@ body {
         &:after {
             content: '';
             display: block;
+            margin-top: -26px; // need this toaccount for the empty span tag in IBMWatson 
             background-size: 48px 48px;
             background-position: center;
             background-repeat: no-repeat;
@@ -319,7 +330,7 @@ main {
           
         @media screen and (max-width: $screen-sm) {       
             height: 51px;
-            margin-top: 0px;
+            margin-top: -1px;
             margin-bottom: 0px;
         }
 
