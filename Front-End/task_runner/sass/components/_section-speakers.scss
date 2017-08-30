@@ -33,12 +33,12 @@
 
         &.green-frame {
             &:after {
-                @include icon( speaker-background-green, 194px, 194px, transparent );
+                @include icon( speaker-background, 194px, 194px, transparent, $brand-secondary );
             } //  &:after 
         } // &.green-frame
         &.purple-frame {
             &:after {
-                @include icon( speaker-background-purple, 194px, 194px, transparent );
+                @include icon( speaker-background, 194px, 194px, transparent, $brand-primary );
             } //  &:after 
         } // &.purple-frame
 
@@ -83,7 +83,7 @@
                 background-size: 124px 32px;
                 background-position: center;
                 background-repeat: no-repeat;
-                @include icon(jellyfish-logo-purple, 124px, 32px, #7f3f97);
+                @include icon( jellyfish-logo, 124px, 32px, $brand-primary, '' );
             } // &:after
 
         } // &.jellyfish

@@ -31,7 +31,7 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         background-size: 970px 508px;
         background-position: center;
         background-repeat: no-repeat;
-        @include icon( lg-background, 970px, 508px, transparent );
+        @include icon( lg-background, 970px, 508px, transparent, $brand-secondary );
         width: 970px;
 
         @media screen and (max-width: $screen-xs) {
@@ -40,7 +40,7 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            @include icon( sm-background, 545px, 363px, transparent );
+            @include icon( sm-background, 545px, 363px, transparent, $brand-secondary );
             width: 100%;
         }
     
@@ -49,7 +49,6 @@ Mobile - min-height of 250px (will grow with spotlight copy)
 
     .callout-container {
         padding: 125px 0 0 0;
-        background-color: $brand-black;
 
         h1 {
             max-width: 570px;
@@ -160,7 +159,7 @@ Mobile - min-height of 250px (will grow with spotlight copy)
                 background-size: 124px 26px;
                 background-position: center;
                 background-repeat: no-repeat;
-                @include icon( jellyfish-logo, 124px, 26px, transparent );
+                @include icon( jellyfish-logo, 124px, 26px, #ffffff, '' );
             } // &:after
         } //  &.jellyfish 
         
@@ -196,7 +195,8 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             background-size: 153px 95px;
             background-position: center;
             background-repeat: no-repeat;
-            @include icon( scroll-button-1, 153px, 95px, transparent );
+            // internal style for fill and stroke
+            @include icon( scroll-button-1, 153px, 95px, transparent, transparent );
             z-index: 10;
             
         } // &:after

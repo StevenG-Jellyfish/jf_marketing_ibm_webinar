@@ -5,7 +5,7 @@ footer {
     height: 280px;
     margin: 0 0 0 0;
     padding: 24px;
-    background-color: $brand-black;
+    background-color: $gray-dark;
 
 
 
@@ -32,7 +32,7 @@ footer {
             background-size: 124px 32px;
             background-position: center;
             background-repeat: no-repeat;
-			@include icon(jellyfish-logo, 124px, 32px, transparent);
+			@include icon(jellyfish-logo, 124px, 32px, #ffffff, '');
 		}
 	} // .logo
 

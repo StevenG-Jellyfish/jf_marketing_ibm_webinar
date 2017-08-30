@@ -156,13 +156,13 @@ body {
         }
 
         &.pencil:after {
-            @include icon( pencil, 60px, 60px, transparent );
+            @include icon( pencil, 60px, 60px, transparent, $brand-primary );
         } // pencil
         &.microphone:after {
-            @include icon( microphone, 60px, 60px, transparent );
+            @include icon( microphone, 60px, 60px, transparent, $brand-primary );
         } // microphone
         &.lightbulb:after {
-            @include icon( lightbulb, 60px, 60px, transparent );
+            @include icon( lightbulb, 60px, 60px, transparent, $brand-primary );
         } // lightbulb
         
     } // icon
@@ -236,7 +236,7 @@ main {
             background-size: cover;
             background-position: left;
             background-repeat: no-repeat;
-            @include icon( page-divider-1, 1920px, 271px, transparent );
+            @include icon( page-divider-1, 1920px, 271px, transparent, '' );
             width: 100%;
 
             @media screen and (max-width: $screen-xs) {       
@@ -275,7 +275,7 @@ main {
             background-size: cover;
             background-position: left;
             background-repeat: no-repeat;
-            @include icon( page-divider-2, 1920px, 97px, transparent );
+            @include icon( page-divider-2, 1920px, 97px, transparent, '' );
             width: 100%;
 
             @media screen and (max-width: $screen-sm) {     
@@ -308,7 +308,7 @@ main {
              background-size: cover;
              background-position: left;
              background-repeat: no-repeat;
-             @include icon( page-divider-3, 1920px, 126px, transparent );
+             @include icon( page-divider-3, 1920px, 126px, transparent, '' );
              width: 100%;
              
             @media screen and (max-width: $screen-sm) {    
@@ -343,7 +343,7 @@ main {
               background-size: cover;
               background-position: left;
               background-repeat: no-repeat;
-              @include icon( page-divider-4, 1920px, 102px, transparent );
+              @include icon( page-divider-4, 1920px, 102px, transparent, '' );
               width: 100%;
               
                 @media screen and (max-width: $screen-sm) {   
