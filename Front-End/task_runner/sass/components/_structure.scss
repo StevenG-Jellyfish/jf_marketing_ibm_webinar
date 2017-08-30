@@ -19,10 +19,15 @@ body {
     font-family: $font-family-sans-serif;
     letter-spacing: 0.09px;
     line-height: 27px;
+    text-align: center;
     color: $grey-text;
 
     &.confirmation-page {
         background-color: $grey-light;
+        
+        #presented-by {
+            margin-top: 135px !important;
+        }
     }
 
     h1 {
