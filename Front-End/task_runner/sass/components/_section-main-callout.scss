@@ -12,8 +12,8 @@ Mobile - min-height of 250px (will grow with spotlight copy)
 
 #main-callout {
     position: relative;
-    margin-top: 120px;
     min-height: 608px;
+    margin: 120px 0 0 0;    
     background-color: $brand-black;
 
     @media screen and (max-width: $screen-sm) { 
