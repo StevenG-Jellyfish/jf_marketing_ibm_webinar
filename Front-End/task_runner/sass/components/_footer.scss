@@ -18,10 +18,14 @@ footer {
 		width: 124px;
 		height: 32px;
 		text-indent: -9999px;
-		color: #fff;
+        color: #fff;
+        z-index: 200;
         
         @media screen and (max-width: $screen-sm) {   
+            position: relative;
             display: block;
+            top: 0;
+            left: 0;
             margin: 0 auto 35px auto;
             text-align: center;
         }
@@ -40,8 +44,10 @@ footer {
 	} // .logo
 
     .copyright {
+        position: relative;
+        z-index: 199;
         
-        @media screen and (max-width: $screen-sm) {   
+        @media screen and (max-width: $screen-sm) {  
             margin: 0 auto;
             text-align: center;
         }

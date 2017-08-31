@@ -40,6 +40,7 @@
                 @include icon( speaker-background, 194px, 194px, transparent, $brand-secondary );
             } //  &:after 
         } // &.green-frame
+
         &.purple-frame {
             &:after {
                 @include icon( speaker-background, 194px, 194px, transparent, $brand-primary );
@@ -56,6 +57,7 @@
     } // speaker-image-container
 
     .logo {
+        position: relative;
         display: block;
         float: none;
         clear: both;
@@ -65,7 +67,7 @@
         &.ibm-watson {
             width: 160px;
             height: 65px;
-            top: 20px;
+            top: 10px;
             /*background-image: url("../images/ibm-watson-logo.png");*/
             background-image: url("https://engage2.silverpop.com/landingpages/service/userContentService?contentId=7546980");
             background-repeat: no-repeat;
@@ -73,17 +75,18 @@
         } // &.ibm-watson
 
         &.jellyfish {
-            width: 160px;
+            width: 124px;
             height: 65px;
             background-repeat: no-repeat;
             background-size: contain;
 
             &:after {
                 content: '';
-                position: relative;
+                position: absolute;
                 display: block;
-                top: 0px;
+                top: 20px;
                 left: 0px;
+                margin: 0 0 0 0;
                 background-size: 124px 32px;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -106,7 +109,9 @@
         @media screen and (max-width: 480px) {
             margin-top: -20px;
         }
+
     } // .speaker-name
+
     .speaker-title {
         display: block;
         font-size: $font-size-xsmall;
@@ -115,6 +120,7 @@
         letter-spacing: 0.14px;
         line-height: 18px;
     } // .speaker-title
+    
     .speaker-twitter {
         display: block;
         margin-top: 5px;
@@ -129,6 +135,7 @@
         &:active {
             text-decoration: underline;
         }
+    
     } // .speaker-twitter
 
 } // speakers

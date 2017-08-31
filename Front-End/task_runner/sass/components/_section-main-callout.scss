@@ -1,13 +1,8 @@
 /*
 * section-main-callout
-*/
-
-/** SPOTLIGHT
-spotlight image spec 1350px X 490px or proportional- web optimized medium (~45KB in size)
-Desktop - min-height of 490px (will grow with spotlight copy)
-Mobile - min-height of 250px (will grow with spotlight copy)
-
-#critial
+*
+*
+* #critial
 **/
 
 #main-callout {
@@ -32,16 +27,16 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         background-position: center;
         background-repeat: no-repeat;
         @include icon( lg-background, 970px, 508px, transparent, $brand-secondary );
-        width: 970px;
+        width: 970px; // width has to go under the mixin
 
-        @media screen and (max-width: $screen-xs) {
+        @media screen and (max-width: $screen-sm) {
             left: 0;
             margin: 0 0 0 -10px;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             @include icon( sm-background, 545px, 363px, transparent, $brand-secondary );
-            width: 100%;
+            width: 100%; // width has to go under the mixin
         }
     
     } // &:after
@@ -49,6 +44,12 @@ Mobile - min-height of 250px (will grow with spotlight copy)
 
     .callout-container {
         padding: 125px 0 0 0;
+        
+        @media screen and (max-width: $screen-sm) {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
 
         h1 {
             max-width: 570px;
@@ -58,12 +59,13 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             line-height: 1.25em;
             text-align: center;
 
-            @media screen and (max-width: $screen-xs) {
+            @media screen and (max-width: $screen-sm) {
                 width: 100%;
-                max-width: 545px;
+                max-width: 300px;
                 margin: -30px auto 10px auto;
                 font-size: 1.15em;
             }
+
         } // h1
 
         h2 {
@@ -71,10 +73,11 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             font-size: $font-size-base;
             font-weight: 500;
             
-            @media screen and (max-width: $screen-xs) {
+            @media screen and (max-width: $screen-sm) {
                 margin: 0 auto 0 auto;
                 font-size: .80em;
             }
+
         } // h2
 
         p {
@@ -82,16 +85,17 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             font-size: $font-size-base;
             font-weight: 500;
             
-            @media screen and (max-width: $screen-xs) {
+            @media screen and (max-width: $screen-sm) {
                 margin: 0 auto 10px auto;
                 font-size: .80em;
             }
+
         } // p
         
         .register-now.btn {
             margin: 5px auto 15px auto;
             
-            @media screen and (max-width: $screen-xs) {
+            @media screen and (max-width: $screen-sm) {
                 margin: 15px auto 0px auto;
             }
 
@@ -122,55 +126,54 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             float: none;
             clear: both;
             height: 1px;
-        }
+        } // &:after
+
+        .logo-container {
+            position: relative;
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            .logo {
+                position: relative;
+                display: inline-block;
+                width: 150px;
+                height: 56px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                text-indent: -9999px;
+                z-index: 200;
+        
+            
+                &.jellyfish {
+        
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        top: 18px;
+                        right: 18px;
+                        background-size: 124px 26px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        @include icon( jellyfish-logo, 124px, 26px, #ffffff, '' );
+                    } // &:after
+
+                } //  &.jellyfish 
+                
+                &.ibm {
+                    //background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg');
+                    //background-image: url('../images/logo-ibm.png');
+                    
+                    background-image: url("https://engage2.silverpop.com/landingpages/service/userContentService?contentId=7546979");
+                } // &.ibm 
+
+            } // .logo
+
+        } // logo-container
 
     } // #presented-by
-
-    .logo {
-        position: relative;
-        display: inline-block;
-        width: 150px;
-        height: 56px;
-        margin: 0 0 0 0;
-        background-repeat: no-repeat;
-        background-position: left top;
-        background-size: contain;
-        text-indent: -9999px;
-        z-index: 200;
-
-        @media screen and (max-width: $screen-xs) {
-            float: left;
-            width: 100px;
-        }
-    
-        &.jellyfish {
-            margin-left: 45px;
-            
-            @media screen and (max-width: $screen-xs) {
-                margin-left:25%;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                display: block;
-                top: 18px;
-                right: 0px;
-                background-size: 124px 26px;
-                background-position: center;
-                background-repeat: no-repeat;
-                @include icon( jellyfish-logo, 124px, 26px, #ffffff, '' );
-            } // &:after
-        } //  &.jellyfish 
-        
-        &.ibm {
-            //background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg');
-            
-            //background-image: url('../images/logo-ibm.png');
-            background-image: url("https://engage2.silverpop.com/landingpages/service/userContentService?contentId=7546979");
-            fill: #fff;
-        } // &.ibm 
-    } // .logo
     
     .scroll-for-more {
         display: block;
@@ -182,7 +185,6 @@ Mobile - min-height of 250px (will grow with spotlight copy)
         background-position: left top;
         background-size: contain;
         text-indent: -9999px;
-
 
         @media screen and (max-width: $screen-sm) {
             display: none;
@@ -197,26 +199,9 @@ Mobile - min-height of 250px (will grow with spotlight copy)
             background-repeat: no-repeat;
             // internal style for fill and stroke
             @include icon( scroll-button-1, 153px, 95px, transparent, transparent );
-            z-index: 10;
-            
+            z-index: 10;            
         } // &:after
-/*
-        &:hover,
-        &:active {
 
-            &:after {
-                content: '';
-                position: absolute;
-                display: block;
-                background-size: 128.4px 75.3px;
-                background-position: center;
-                background-repeat: no-repeat;
-                @include icon( scroll-button-2, 123.8px, 75.3px, transparent );
-                
-            } //&:after
-
-        } // &:hover,&:active
-*/    
     } // .scroll-for-more 
 
-} // main-callout
+} // .main-callout

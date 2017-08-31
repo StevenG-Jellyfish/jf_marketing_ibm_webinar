@@ -26,7 +26,7 @@ body {
         background-color: $grey-light;
         
         #presented-by {
-            margin-top: 135px !important;
+            margin-top: 170px !important;
         }
     }
 
@@ -387,6 +387,10 @@ section {
     padding: 0 10%;
     border: 0px;
     outline: 0px;
+    
+    @media screen and (max-width: $screen-xs) {   
+        padding: 0 5%;
+    }
 
 } // section
 
