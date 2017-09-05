@@ -1,4 +1,7 @@
 *.log
+*.zip
+*.tar
+*.tgz
 
 /.htaccess
 /license.txt
